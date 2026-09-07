@@ -15,7 +15,9 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           
           {/* Brand Bio Column */}
           <div className="lg:col-span-5 space-y-4">
-            <KevayLogo variant="light" size="lg" />
+            <div className="inline-block bg-[#FAF6EE] px-3 py-2 rounded-xl border border-[#E6DCB9] shadow-sm">
+              <KevayLogo variant="dark" size="lg" />
+            </div>
             <p className="text-xs text-[#E6DCB9]/80 font-['Plus_Jakarta_Sans'] leading-relaxed max-w-md pt-2">
               Kevay International is a premier global exporter of luxury handcrafted art, carved wooden frames, brass metalwork, and heritage sculptures. Dedicated to preserving authentic Indian craftsmanship for international enterprise projects.
             </p>
