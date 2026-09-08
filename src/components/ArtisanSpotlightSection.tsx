@@ -1,5 +1,4 @@
-import React from 'react';
-import { Palette, Layers, Building2, Users } from 'lucide-react';
+import { Building2, Users } from 'lucide-react';
 
 interface SpotlightProps {
   onOpenInquiry: () => void;
