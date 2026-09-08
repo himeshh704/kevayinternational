@@ -19,21 +19,21 @@ export const HeroSection: React.FC<HeroProps> = ({ onExplore }) => {
           <div className="lg:col-span-6 space-y-6 lg:space-y-8 text-left z-10">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E6DCB9]/40 border border-[#C59B27]/30 text-xs font-semibold text-[#1C1917] tracking-wider uppercase">
               <Sparkles size={14} className="text-[#C83E24]" />
-              Premier Export House of Heritage Craft
+              In-House Manufacturer • Tanawara, Jodhpur
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-['Cinzel'] text-[#1C1917] leading-[1.15] tracking-tight">
-              Amazing <br />
-              <span className="text-[#C83E24]">Modern Artworks</span> & Heritage Crafts
+              Handcrafted <br />
+              <span className="text-[#C83E24]">Solid Wood Furniture</span> & Heritage Crafts
             </h1>
 
             <p className="text-base sm:text-lg text-[#6B655B] max-w-xl font-['Plus_Jakarta_Sans'] leading-relaxed">
-              Kevay International bridges master Indian artisans with luxury global architects, interior designers, and fine art collectors. Discover custom carved frames, brass sculptures, and heritage masterpieces.
+              Jodhpur’s premier in-house manufacturer with 15+ years of excellence supplying top global brands like Urban Ladder. Operating 4 specialized factory units with 50+ master artisans for solid wood dining, lounge seating, bar stools, and export handicrafts.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 pt-2">
               <button onClick={onExplore} className="btn-brush group">
-                <span>Explore Portfolio</span>
+                <span>Explore Catalog</span>
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </button>
 
@@ -42,28 +42,28 @@ export const HeroSection: React.FC<HeroProps> = ({ onExplore }) => {
                 className="btn-brush-secondary"
               >
                 <Compass size={18} />
-                <span>B2B Export Guide</span>
+                <span>B2B Factory Guide</span>
               </a>
             </div>
 
             {/* Feature Pills */}
             <div className="pt-6 border-t border-[#E6DCB9]/60 grid grid-cols-3 gap-4">
               <div>
-                <span className="block text-2xl font-bold font-['Cinzel'] text-[#1C1917]">100%</span>
-                <span className="text-xs text-[#6B655B]">Handcrafted Quality</span>
+                <span className="block text-2xl font-bold font-['Cinzel'] text-[#1C1917]">15+ Yrs</span>
+                <span className="text-xs text-[#6B655B]">Craft Legacy</span>
               </div>
               <div>
-                <span className="block text-2xl font-bold font-['Cinzel'] text-[#1C1917]">40+</span>
-                <span className="text-xs text-[#6B655B]">Export Countries</span>
+                <span className="block text-2xl font-bold font-['Cinzel'] text-[#1C1917]">4 Units</span>
+                <span className="text-xs text-[#6B655B]">Jodhpur Factories</span>
               </div>
               <div>
-                <span className="block text-2xl font-bold font-['Cinzel'] text-[#1C1917]">Custom</span>
-                <span className="text-xs text-[#6B655B]">OEM Commissions</span>
+                <span className="block text-2xl font-bold font-['Cinzel'] text-[#1C1917]">50+</span>
+                <span className="text-xs text-[#6B655B]">Master Woodworkers</span>
               </div>
             </div>
           </div>
 
-          {/* Right Artistic Illustration Column (Matching Reference Image 1) */}
+          {/* Right Artistic Illustration Column */}
           <div className="lg:col-span-6 relative flex justify-center lg:justify-end">
             
             {/* Terracotta Graphic Shape backdrop */}
@@ -76,8 +76,8 @@ export const HeroSection: React.FC<HeroProps> = ({ onExplore }) => {
               {/* Illustration Container */}
               <div className="relative rounded-2xl overflow-hidden bg-gradient-to-b from-[#F3EBDD] to-[#E6DCB9]/50 p-4 border border-[#E6DCB9]">
                 <img
-                  src="/assets/hero_craftsman_sketch.png"
-                  alt="Artisan Craftsman at work"
+                  src="/assets/jodhpur_dining_chair.png"
+                  alt="Solid Teak Dining Chair Artwork"
                   className="w-full h-auto object-cover rounded-xl transform hover:scale-105 transition-transform duration-700"
                 />
 
@@ -88,9 +88,9 @@ export const HeroSection: React.FC<HeroProps> = ({ onExplore }) => {
                   </div>
                   <div>
                     <span className="block text-xs font-bold text-[#1C1917] uppercase tracking-wider font-['Cinzel']">
-                      Kevay Certified
+                      Tanawara Craft Hub
                     </span>
-                    <span className="text-[11px] text-[#6B655B]">Master Craftsman Direct</span>
+                    <span className="text-[11px] text-[#6B655B]">Urban Ladder Approved OEM</span>
                   </div>
                 </div>
               </div>
@@ -98,10 +98,10 @@ export const HeroSection: React.FC<HeroProps> = ({ onExplore }) => {
               {/* Caption */}
               <div className="mt-4 text-center">
                 <span className="text-xs font-semibold text-[#C83E24] tracking-widest uppercase">
-                  Featured Master Illustration
+                  Solid Teak & Sheesham Craftsmanship
                 </span>
                 <p className="text-xs text-[#6B655B] mt-0.5">
-                  Hand-rendered linework with terracotta architectural arches
+                  Hand-lathed legs with natural rattan cane backrests
                 </p>
               </div>
             </div>

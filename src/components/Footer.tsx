@@ -19,7 +19,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               <KevayLogo variant="dark" size="lg" />
             </div>
             <p className="text-xs text-[#E6DCB9]/80 font-['Plus_Jakarta_Sans'] leading-relaxed max-w-md pt-2">
-              Kevay International is a premier global exporter of luxury handcrafted art, carved wooden frames, brass metalwork, and heritage sculptures. Dedicated to preserving authentic Indian craftsmanship for international enterprise projects.
+              Kevay International is a premier in-house solid wood furniture manufacturer and export house based in Tanawara, Jodhpur. Operating 4 factory units with 50+ master artisans, we have supplied leading brands like Urban Ladder for over 15 years with solid wood dining, lounge chairs, bar stools, and heritage crafts.
             </p>
             
             <div className="pt-2 flex items-center gap-4 text-[#E6DCB9]">
@@ -35,32 +35,32 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           {/* Quick Links Column */}
           <div className="lg:col-span-3 space-y-3">
             <h4 className="text-sm font-bold font-['Cinzel'] uppercase tracking-wider text-[#C59B27]">
-              Portfolio Collections
+              Manufacturing Categories
             </h4>
             <ul className="space-y-2 text-xs text-[#E6DCB9]/80">
               <li>
-                <button onClick={() => onNavigate('frames')} className="hover:text-[#C83E24] transition-colors">
-                  Carved Teakwood Frames
+                <button onClick={() => onNavigate('catalog')} className="hover:text-[#C83E24] transition-colors">
+                  Solid Wood Dining Chairs
                 </button>
               </li>
               <li>
                 <button onClick={() => onNavigate('catalog')} className="hover:text-[#C83E24] transition-colors">
-                  Victorian Gold Filigree
+                  Lounge Chairs & Seating
                 </button>
               </li>
               <li>
                 <button onClick={() => onNavigate('catalog')} className="hover:text-[#C83E24] transition-colors">
-                  Brass & Meenakari Sculptures
+                  Bar Stools & Counter Seating
                 </button>
               </li>
               <li>
                 <button onClick={() => onNavigate('catalog')} className="hover:text-[#C83E24] transition-colors">
-                  Pietra Dura Marble Inlay
+                  Accent Chairs & Carved Frames
                 </button>
               </li>
               <li>
                 <button onClick={() => onNavigate('export')} className="hover:text-[#C83E24] transition-colors">
-                  B2B Wholesale Catalog
+                  B2B OEM Wholesale Orders
                 </button>
               </li>
             </ul>
@@ -69,12 +69,12 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           {/* Contact Details Column */}
           <div className="lg:col-span-4 space-y-3">
             <h4 className="text-sm font-bold font-['Cinzel'] uppercase tracking-wider text-[#C59B27]">
-              International Export Desk
+              Jodhpur Factory & Export Desk
             </h4>
             <div className="space-y-2.5 text-xs text-[#E6DCB9]/80">
               <div className="flex items-start gap-2.5">
                 <MapPin size={16} className="text-[#C83E24] shrink-0 mt-0.5" />
-                <span>Export House, Industrial Art Zone, Rajasthan 302022, India</span>
+                <span>Tanawara Industrial Area, Jodhpur, Rajasthan 342001, India</span>
               </div>
               <div className="flex items-center gap-2.5">
                 <Mail size={16} className="text-[#C83E24] shrink-0" />

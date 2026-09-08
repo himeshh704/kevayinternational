@@ -1,7 +1,7 @@
 export interface HandicraftItem {
   id: string;
   title: string;
-  category: 'Wood Carvings' | 'Brass & Metalwork' | 'Filigree Frames' | 'Stone & Ceramics' | 'Hand-painted Tapestry';
+  category: 'Dining Chairs' | 'Lounge Seating' | 'Accent & Carved Chairs' | 'Bar Stools' | 'Carved Frames' | 'Heritage Handicrafts';
   price: string;
   dimensions: string;
   weight: string;
@@ -16,106 +16,106 @@ export interface HandicraftItem {
 
 export const CATEGORIES = [
   'All',
-  'Wood Carvings',
-  'Brass & Metalwork',
-  'Filigree Frames',
-  'Stone & Ceramics',
-  'Hand-painted Tapestry'
+  'Dining Chairs',
+  'Lounge Seating',
+  'Accent & Carved Chairs',
+  'Bar Stools',
+  'Carved Frames',
+  'Heritage Handicrafts'
 ] as const;
 
 export const CATALOG_ITEMS: HandicraftItem[] = [
   {
     id: 'item-1',
+    title: 'Tanawara Solid Teak Cane Dining Chair',
+    category: 'Dining Chairs',
+    price: '$280',
+    dimensions: '20" x 22" x 38"',
+    weight: '7.2 kg',
+    material: 'Solid Teak Wood & Natural Rattan Cane',
+    origin: 'Tanawara, Jodhpur',
+    image: '/assets/jodhpur_dining_chair.png',
+    tag: 'BESTSELLER',
+    description: 'Precision-engineered solid teakwood dining chair featuring handcrafted floral reliefs and woven rattan backrest. Built with 15+ years of OEM manufacturing expertise.',
+    moq: '10 units'
+  },
+  {
+    id: 'item-2',
+    title: 'Cognac Leather Sheesham Lounge Armchair',
+    category: 'Lounge Seating',
+    price: '$490',
+    dimensions: '30" x 32" x 34"',
+    weight: '14.5 kg',
+    material: 'Seasoned Sheesham Wood & Top-Grain Leather',
+    origin: 'Tanawara, Jodhpur',
+    image: '/assets/lounge_accent_chair.png',
+    tag: 'NEW',
+    description: 'Ergonomic mid-century lounge chair with hand-lathed Sheesham wood armrests and plush cognac leather cushioning. Engineered for luxury hotel lounges & master suites.',
+    moq: '5 units'
+  },
+  {
+    id: 'item-3',
+    title: 'Jodhpur Lathe-Turned Walnut Bar Stool',
+    category: 'Bar Stools',
+    price: '$210',
+    dimensions: '16" x 16" x 30"',
+    weight: '6.8 kg',
+    material: 'Solid Mango Wood & Brushed Brass Ring',
+    origin: 'Tanawara, Jodhpur',
+    image: '/assets/carved_bar_stool.png',
+    tag: 'EXCLUSIVE',
+    description: 'Hand-turned solid mango wood bar stool with a polished brass footrest ring and hand-rubbed antique walnut stain. Kiln-dried to 8% moisture for international climate durability.',
+    moq: '12 units'
+  },
+  {
+    id: 'item-4',
     title: 'Teakwood Royal Heritage Carved Frame',
-    category: 'Wood Carvings',
+    category: 'Carved Frames',
     price: '$450',
     dimensions: '24" x 36" x 2"',
     weight: '4.8 kg',
     material: 'Solid Teak Wood & Natural Polish',
-    origin: 'Saharanpur, India',
+    origin: 'Tanawara, Jodhpur',
     image: '/assets/wood_carved_frame.png',
     frameType: 'wood',
     tag: 'HERITAGE',
-    description: 'Masterfully carved teak wood frame featuring intricate floral arabesque reliefs, housing a classic coastal landscape artwork. Perfect for luxury hotel lobbies and upscale residences.',
+    description: 'Masterfully hand-carved teak wood frame featuring intricate arabesque reliefs. Crafted by generational woodcarvers in our Jodhpur factory units.',
     moq: '5 units'
   },
   {
-    id: 'item-2',
+    id: 'item-5',
     title: 'Victorian Gold Filigree Oil Canvas Frame',
-    category: 'Filigree Frames',
+    category: 'Carved Frames',
     price: '$680',
     dimensions: '30" x 40" x 2.5"',
     weight: '6.2 kg',
     material: 'Hand-cast Brass Filigree & 24K Gold Leafing',
-    origin: 'Moradabad, India',
+    origin: 'Tanawara, Jodhpur',
     image: '/assets/gold_filigree_frame.png',
     frameType: 'gold',
     tag: 'BESTSELLER',
-    description: 'Opulent gold filigree border frame showcasing a vibrant modern abstract oil painting. Each curve is hand-chiseled by generational brass artisans.',
+    description: 'Opulent gold filigree border frame showcasing a vibrant modern abstract oil painting. Each curve is hand-chiseled by our master metal artisans.',
     moq: '3 units'
   },
   {
-    id: 'item-3',
-    title: 'Mahogany Oriental Gold-Ink Artwork Frame',
-    category: 'Filigree Frames',
-    price: '$520',
-    dimensions: '20" x 28" x 1.5"',
-    weight: '3.5 kg',
-    material: 'Seasoned Mahogany & Real Gold Foil',
-    origin: 'Jaipur, India',
-    image: '/assets/minimal_modern_frame.png',
-    frameType: 'minimal',
-    tag: 'NEW',
-    description: 'Sleek dark mahogany frame surrounding hand-rendered oriental gold ink artwork on handmade parchment paper with archival silk matting.',
-    moq: '5 units'
-  },
-  {
-    id: 'item-4',
+    id: 'item-6',
     title: 'Royal Enamel Royal Peacock Brass Statue',
-    category: 'Brass & Metalwork',
+    category: 'Heritage Handicrafts',
     price: '$890',
     dimensions: '18" x 12" x 22"',
     weight: '8.5 kg',
     material: 'Solid Brass with Meenakari Enamel Inlay',
-    origin: 'Moradabad, India',
+    origin: 'Tanawara, Jodhpur',
     image: '/assets/brass_peacock_sculpture.png',
     tag: 'EXCLUSIVE',
     description: 'Regal brass peacock sculpture embellished with vivid cobalt blue and emerald green Meenakari enamel work on a solid black marble plinth.',
     moq: '2 units'
-  },
-  {
-    id: 'item-5',
-    title: 'Hand-Painted Rajasthani Terracotta Vase Trio',
-    category: 'Stone & Ceramics',
-    price: '$340',
-    dimensions: 'Set of 3 (12", 16", 20" Height)',
-    weight: '5.2 kg (Set)',
-    material: 'Baked Terracotta Clay & Mineral Pigments',
-    origin: 'Khavda, Gujarat',
-    image: '/assets/terracotta_pottery_set.png',
-    tag: 'NEW',
-    description: 'Earthy terracotta vessels adorned with traditional tribal motifs and metallic gold detailing, baked in traditional wood-fired kilns.',
-    moq: '10 sets'
-  },
-  {
-    id: 'item-6',
-    title: 'Pietra Dura White Marble Inlay Treasure Box',
-    category: 'Stone & Ceramics',
-    price: '$750',
-    dimensions: '12" x 8" x 4"',
-    weight: '4.1 kg',
-    material: 'Makrana White Marble & Lapis Lazuli Inlay',
-    origin: 'Agra, India',
-    image: '/assets/marble_inlay_box.png',
-    tag: 'HERITAGE',
-    description: 'Handcrafted using Taj Mahal Pietra Dura technique, embedding semiprecious lapis lazuli, jasper, and turquoise into flawless white marble.',
-    moq: '5 units'
   }
 ];
 
 export const STATS = [
-  { label: 'Digital & Brass Handicrafts', count: '1,200 +' },
-  { label: 'Abstract & Wood Carvings', count: '4,560 +' },
-  { label: '3D Art & Metalwork', count: '1,250 +' },
-  { label: 'Heritage Sculptures', count: '4,255 +' }
+  { label: 'Craft Experience', count: '15+ Yrs' },
+  { label: 'Jodhpur Factory Units', count: '4 Units' },
+  { label: 'Master Artisans', count: '50+ Team' },
+  { label: 'Global B2B Shipments', count: '40+ Countries' }
 ];
