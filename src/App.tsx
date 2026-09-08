@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { Header } from './components/Header';
 import { HeroSection } from './components/HeroSection';
-import { FramesCollectionSection } from './components/FramesCollectionSection';
-import { StatsBannerSection } from './components/StatsBannerSection';
-import { ArtisanSpotlightSection } from './components/ArtisanSpotlightSection';
+import { AboutSection } from './components/AboutSection';
+import { WhyChooseUsSection } from './components/WhyChooseUsSection';
+import { WhoWeAreSection } from './components/WhoWeAreSection';
 import { CatalogSection } from './components/CatalogSection';
 import { GlobalExportSection } from './components/GlobalExportSection';
 import { ProductModal } from './components/ProductModal';
@@ -79,24 +79,16 @@ export function App() {
           onExplore={() => handleNavigate('catalog')}
         />
 
-        {/* Frames Collection Showcase (Matching Reference Image Section 2) */}
-        <FramesCollectionSection
-          onSelectCategory={(cat) => {
-            setSelectedCategory(cat);
-            handleNavigate('catalog');
-          }}
-          onOpenInquiry={() => setIsInquiryOpen(true)}
-        />
+        {/* About Us Section */}
+        <AboutSection />
 
-        {/* Terracotta Counter Metrics Banner (Matching Reference Image Section 3) */}
-        <StatsBannerSection />
+        {/* 7 Core Pillars - Why Choose Us */}
+        <WhyChooseUsSection />
 
-        {/* Artisan Spotlight (Matching Reference Image Section 4) */}
-        <ArtisanSpotlightSection
-          onOpenInquiry={() => setIsInquiryOpen(true)}
-        />
+        {/* Who We Are - Family Legacy & Leadership */}
+        <WhoWeAreSection />
 
-        {/* Hand Picked Catalog Grid (Matching Reference Image Section 5) */}
+        {/* Product Range Catalog Showcase (NO PRICES DISPLAYED) */}
         <CatalogSection
           items={CATALOG_ITEMS}
           selectedCategory={selectedCategory}
@@ -108,7 +100,7 @@ export function App() {
           inquiryItemIds={inquiryItems.map(i => i.id)}
         />
 
-        {/* B2B Global Export & Custom Commissions Section */}
+        {/* Direct Contact & RFQ Section */}
         <GlobalExportSection />
       </main>
 

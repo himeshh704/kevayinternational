@@ -64,19 +64,19 @@ export const ProductModal: React.FC<ProductModalProps> = ({
             <div className="bg-[#FAF6EE] p-4 rounded-xl space-y-2 border border-[#E6DCB9] text-xs">
               <div className="flex items-center justify-between">
                 <span className="text-[#6B655B] flex items-center gap-1.5">
-                  <MapPin size={14} className="text-[#C83E24]" /> Origin
+                  <MapPin size={14} className="text-[#C83E24]" /> Manufacturing Origin
                 </span>
                 <span className="font-semibold text-[#1C1917]">{item.origin}</span>
               </div>
               <div className="flex items-center justify-between">
                 <span className="text-[#6B655B] flex items-center gap-1.5">
-                  <Maximize2 size={14} className="text-[#C83E24]" /> Dimensions
+                  <Maximize2 size={14} className="text-[#C83E24]" /> Standard Dimensions
                 </span>
                 <span className="font-semibold text-[#1C1917]">{item.dimensions}</span>
               </div>
               <div className="flex items-center justify-between">
                 <span className="text-[#6B655B] flex items-center gap-1.5">
-                  <Scale size={14} className="text-[#C83E24]" /> Weight
+                  <Scale size={14} className="text-[#C83E24]" /> Unit Weight
                 </span>
                 <span className="font-semibold text-[#1C1917]">{item.weight}</span>
               </div>
@@ -88,7 +88,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({
               </div>
             </div>
 
-            {/* Action Row */}
+            {/* Action Row (NO PRICE DISPLAY) */}
             <div className="pt-2 flex items-center justify-between gap-4">
               <div>
                 <span className="block text-[10px] text-[#6B655B] uppercase">Export MOQ</span>
@@ -100,7 +100,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({
                   onAddToInquiry(item);
                   onClose();
                 }}
-                className="btn-brush"
+                className="btn-brush text-xs"
               >
                 <ShoppingBag size={16} />
                 <span>{isInInquiry ? 'Added to Inquiry' : 'Add to Inquiry Bag'}</span>

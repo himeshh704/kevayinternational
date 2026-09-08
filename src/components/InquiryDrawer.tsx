@@ -82,7 +82,7 @@ export const InquiryDrawer: React.FC<InquiryDrawerProps> = ({
                 <ShoppingBag size={48} className="text-[#E6DCB9] mx-auto" />
                 <h4 className="text-base font-bold font-['Cinzel'] text-[#1C1917]">Your Inquiry Bag is Empty</h4>
                 <p className="text-xs text-[#6B655B] max-w-xs mx-auto">
-                  Browse our portfolio catalog and click "Inquire" to add crafted frames, sculptures, and artifacts to your quote request.
+                  Browse our product range and click "Add to RFQ" to request B2B pricing and prototype sampling.
                 </p>
               </div>
             ) : (
@@ -90,7 +90,7 @@ export const InquiryDrawer: React.FC<InquiryDrawerProps> = ({
                 {/* Selected Items List */}
                 <div className="space-y-3">
                   <div className="flex justify-between items-center text-xs font-semibold text-[#6B655B] uppercase">
-                    <span>Selected Artifacts</span>
+                    <span>Selected Range</span>
                     <button
                       onClick={onClearAll}
                       className="text-[#C83E24] hover:underline text-[11px]"
@@ -116,7 +116,7 @@ export const InquiryDrawer: React.FC<InquiryDrawerProps> = ({
                         <p className="text-[10px] text-[#6B655B]">
                           MOQ: {item.moq} | {item.dimensions}
                         </p>
-                        <span className="text-xs font-bold text-[#C83E24]">{item.price}</span>
+                        <span className="text-[11px] font-semibold text-[#C83E24]">Custom B2B Quote</span>
                       </div>
                       <button
                         onClick={() => onRemoveItem(item.id)}
@@ -177,7 +177,7 @@ export const InquiryDrawer: React.FC<InquiryDrawerProps> = ({
                     />
                   </div>
 
-                  <button type="submit" className="btn-brush w-full justify-center">
+                  <button type="submit" className="btn-brush w-full justify-center text-xs">
                     <Send size={16} />
                     <span>Send RFQ Quote Request</span>
                   </button>

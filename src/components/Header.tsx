@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Search, Heart, ShoppingBag, User, Menu, X } from 'lucide-react';
+import { Search, Heart, ShoppingBag, Menu, X, Phone } from 'lucide-react';
 import { KevayLogo } from './KevayLogo';
+import { CONTACT_INFO } from '../data/catalog';
 
 interface HeaderProps {
   inquiryCount: number;
@@ -25,10 +26,10 @@ export const Header: React.FC<HeaderProps> = ({
 
   const navLinks = [
     { name: 'Home', id: 'hero' },
-    { name: 'Frames Collection', id: 'frames' },
-    { name: 'About Artisans', id: 'artisan' },
-    { name: 'Portfolio Catalog', id: 'catalog' },
-    { name: 'Global Exports', id: 'export' },
+    { name: 'About Us', id: 'about' },
+    { name: 'Why Choose Us', id: 'why-choose-us' },
+    { name: 'Who We Are', id: 'who-we-are' },
+    { name: 'Product Range', id: 'catalog' },
     { name: 'Contact Us', id: 'contact' },
   ];
 
@@ -48,14 +49,14 @@ export const Header: React.FC<HeaderProps> = ({
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-7">
           {navLinks.map((link) => (
             <button
               key={link.id}
               onClick={() => onNavigate(link.id)}
-              className={`text-sm font-medium transition-colors relative py-1 ${
+              className={`text-xs font-semibold uppercase tracking-wider transition-colors relative py-1 ${
                 activeSection === link.id
-                  ? 'text-[#C83E24] font-semibold'
+                  ? 'text-[#C83E24] font-bold'
                   : 'text-[#1C1917] hover:text-[#C83E24]'
               }`}
             >
@@ -67,15 +68,25 @@ export const Header: React.FC<HeaderProps> = ({
           ))}
         </nav>
 
-        {/* Action Icons */}
-        <div className="flex items-center gap-5">
+        {/* Action Icons & Contact Direct Link */}
+        <div className="flex items-center gap-4">
+          
+          {/* Quick Call Button */}
+          <a
+            href={`tel:${CONTACT_INFO.phone}`}
+            className="hidden xl:inline-flex items-center gap-1.5 text-xs font-bold text-[#1C1917] bg-[#E6DCB9]/50 hover:bg-[#E6DCB9] px-3 py-1.5 rounded-full transition-colors"
+          >
+            <Phone size={14} className="text-[#C83E24]" />
+            <span>{CONTACT_INFO.phone}</span>
+          </a>
+
           {/* Search Toggle */}
           <div className="relative">
             {isSearchOpen ? (
               <form onSubmit={handleSearchSubmit} className="flex items-center bg-white border border-[#E6DCB9] rounded-full px-3 py-1.5 shadow-sm">
                 <input
                   type="text"
-                  placeholder="Search craft, frame..."
+                  placeholder="Search chair, table, marble..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-36 sm:w-48 bg-transparent text-xs text-[#1C1917] focus:outline-none"
@@ -92,7 +103,7 @@ export const Header: React.FC<HeaderProps> = ({
               <button
                 onClick={() => setIsSearchOpen(true)}
                 className="p-2 text-[#1C1917] hover:text-[#C83E24] transition-colors rounded-full hover:bg-black/5"
-                title="Search Portfolio"
+                title="Search Range"
               >
                 <Search size={20} />
               </button>
@@ -117,7 +128,7 @@ export const Header: React.FC<HeaderProps> = ({
           <button
             onClick={onOpenInquiry}
             className="relative p-2 text-[#1C1917] hover:text-[#C83E24] transition-colors rounded-full hover:bg-black/5"
-            title="View RFQ Inquiry Bag"
+            title="RFQ Cart"
           >
             <ShoppingBag size={20} />
             {inquiryCount > 0 && (
@@ -125,15 +136,6 @@ export const Header: React.FC<HeaderProps> = ({
                 {inquiryCount}
               </span>
             )}
-          </button>
-
-          {/* Account Icon */}
-          <button
-            onClick={() => onNavigate('contact')}
-            className="hidden sm:flex p-2 text-[#1C1917] hover:text-[#C83E24] transition-colors rounded-full hover:bg-black/5"
-            title="Client Portal"
-          >
-            <User size={20} />
           </button>
 
           {/* Mobile Menu Button */}

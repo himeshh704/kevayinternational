@@ -1,7 +1,7 @@
 import React from 'react';
 import { CATEGORIES } from '../data/catalog';
 import type { HandicraftItem } from '../data/catalog';
-import { Eye, Plus, Check, Heart } from 'lucide-react';
+import { Eye, Plus, Check, Heart, ShieldCheck } from 'lucide-react';
 
 interface CatalogProps {
   items: HandicraftItem[];
@@ -35,13 +35,13 @@ export const CatalogSection: React.FC<CatalogProps> = ({
         {/* Header Title */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <span className="text-xs font-bold text-[#C83E24] uppercase tracking-widest">
-            Curated Global Catalog
+            B2B Manufacturing Catalog
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-['Cinzel'] text-[#1C1917]">
-            Hand Picked Handicrafts & Artworks
+            Product Range & Material Showcase
           </h2>
           <p className="text-sm sm:text-base text-[#6B655B] font-['Plus_Jakarta_Sans']">
-            Explore our curated export collection. Each artifact comes with certified origin provenance, export packing, and enterprise OEM options.
+            Explore our solid-wood and mixed-material range. Request B2B pricing, custom dimensions, and prototype sampling for your brand.
           </p>
         </div>
 
@@ -115,7 +115,7 @@ export const CatalogSection: React.FC<CatalogProps> = ({
                 <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
                   <div className="space-y-2">
                     <div className="flex justify-between items-center text-xs text-[#6B655B]">
-                      <span>{item.category}</span>
+                      <span className="font-semibold text-[#C83E24]">{item.category}</span>
                       <span className="font-semibold text-[#C59B27]">{item.origin}</span>
                     </div>
 
@@ -140,28 +140,28 @@ export const CatalogSection: React.FC<CatalogProps> = ({
                     </div>
                   </div>
 
-                  {/* Action Buttons */}
+                  {/* Action Buttons (NO PRICE DISPLAY) */}
                   <div className="pt-2 flex items-center justify-between gap-3">
-                    <div>
-                      <span className="text-xs text-[#6B655B]">Est. Wholesale</span>
-                      <span className="block text-xl font-bold font-['Cinzel'] text-[#1C1917]">{item.price}</span>
+                    <div className="flex items-center gap-1 text-xs text-[#6B655B] font-semibold">
+                      <ShieldCheck size={16} className="text-[#C83E24]" />
+                      <span>Custom B2B OEM</span>
                     </div>
 
                     <button
                       onClick={() => onAddToInquiry(item)}
-                      className={`btn-brush py-2 px-4 text-xs ${
+                      className={`btn-brush py-2.5 px-4 text-xs ${
                         isInInquiry ? 'bg-[#1C1917] hover:bg-[#332E2A]' : ''
                       }`}
                     >
                       {isInInquiry ? (
                         <>
                           <Check size={14} />
-                          <span>In Bag</span>
+                          <span>In Inquiry Bag</span>
                         </>
                       ) : (
                         <>
                           <Plus size={14} />
-                          <span>Inquire</span>
+                          <span>Add to RFQ</span>
                         </>
                       )}
                     </button>

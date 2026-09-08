@@ -1,5 +1,7 @@
+import React from 'react';
 import { KevayLogo } from './KevayLogo';
 import { Mail, Phone, MapPin, Globe, Share2, MessageSquare } from 'lucide-react';
+import { CONTACT_INFO } from '../data/catalog';
 
 interface FooterProps {
   onNavigate: (sectionId: string) => void;
@@ -19,14 +21,14 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               <KevayLogo variant="dark" size="lg" />
             </div>
             <p className="text-xs text-[#E6DCB9]/80 font-['Plus_Jakarta_Sans'] leading-relaxed max-w-md pt-2">
-              Kevay International is a premier in-house solid wood furniture manufacturer and export house based in Tanawara, Jodhpur. Operating 4 factory units with 50+ master artisans, we have supplied leading brands like Urban Ladder for over 15 years with solid wood dining, lounge chairs, bar stools, and heritage crafts.
+              <strong>{CONTACT_INFO.company}</strong> — {CONTACT_INFO.tagline}. Based in Tanawara, Jodhpur, we specialize in solid-wood and mixed-material furniture manufacturing for global brands and retail partners.
             </p>
             
             <div className="pt-2 flex items-center gap-4 text-[#E6DCB9]">
               <a href="#" className="p-2 bg-white/5 rounded-full hover:bg-[#C83E24] hover:text-white transition-colors" title="Social Media">
                 <Share2 size={18} />
               </a>
-              <a href="#" className="p-2 bg-white/5 rounded-full hover:bg-[#C83E24] hover:text-white transition-colors" title="Direct Contact">
+              <a href={`mailto:${CONTACT_INFO.email}`} className="p-2 bg-white/5 rounded-full hover:bg-[#C83E24] hover:text-white transition-colors" title="Direct Email">
                 <MessageSquare size={18} />
               </a>
             </div>
@@ -35,32 +37,32 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           {/* Quick Links Column */}
           <div className="lg:col-span-3 space-y-3">
             <h4 className="text-sm font-bold font-['Cinzel'] uppercase tracking-wider text-[#C59B27]">
-              Manufacturing Categories
+              Navigation
             </h4>
             <ul className="space-y-2 text-xs text-[#E6DCB9]/80">
               <li>
-                <button onClick={() => onNavigate('catalog')} className="hover:text-[#C83E24] transition-colors">
-                  Solid Wood Dining Chairs
+                <button onClick={() => onNavigate('hero')} className="hover:text-[#C83E24] transition-colors">
+                  Home
+                </button>
+              </li>
+              <li>
+                <button onClick={() => onNavigate('about')} className="hover:text-[#C83E24] transition-colors">
+                  About Us
+                </button>
+              </li>
+              <li>
+                <button onClick={() => onNavigate('why-choose-us')} className="hover:text-[#C83E24] transition-colors">
+                  Why Choose Us (7 Pillars)
+                </button>
+              </li>
+              <li>
+                <button onClick={() => onNavigate('who-we-are')} className="hover:text-[#C83E24] transition-colors">
+                  Who We Are (Family Legacy)
                 </button>
               </li>
               <li>
                 <button onClick={() => onNavigate('catalog')} className="hover:text-[#C83E24] transition-colors">
-                  Lounge Chairs & Seating
-                </button>
-              </li>
-              <li>
-                <button onClick={() => onNavigate('catalog')} className="hover:text-[#C83E24] transition-colors">
-                  Bar Stools & Counter Seating
-                </button>
-              </li>
-              <li>
-                <button onClick={() => onNavigate('catalog')} className="hover:text-[#C83E24] transition-colors">
-                  Accent Chairs & Carved Frames
-                </button>
-              </li>
-              <li>
-                <button onClick={() => onNavigate('export')} className="hover:text-[#C83E24] transition-colors">
-                  B2B OEM Wholesale Orders
+                  Product Range
                 </button>
               </li>
             </ul>
@@ -69,20 +71,20 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           {/* Contact Details Column */}
           <div className="lg:col-span-4 space-y-3">
             <h4 className="text-sm font-bold font-['Cinzel'] uppercase tracking-wider text-[#C59B27]">
-              Jodhpur Factory & Export Desk
+              Direct Contact
             </h4>
             <div className="space-y-2.5 text-xs text-[#E6DCB9]/80">
               <div className="flex items-start gap-2.5">
                 <MapPin size={16} className="text-[#C83E24] shrink-0 mt-0.5" />
-                <span>Tanawara Industrial Area, Jodhpur, Rajasthan 342001, India</span>
+                <span>{CONTACT_INFO.address}</span>
               </div>
               <div className="flex items-center gap-2.5">
                 <Mail size={16} className="text-[#C83E24] shrink-0" />
-                <span>exports@kevayinternational.com</span>
+                <span>{CONTACT_INFO.email}</span>
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone size={16} className="text-[#C83E24] shrink-0" />
-                <span>+91 98290 12345 / +1 (800) 555-KEVAY</span>
+                <span>{CONTACT_INFO.phone}</span>
               </div>
               <div className="flex items-center gap-2.5">
                 <Globe size={16} className="text-[#C83E24] shrink-0" />
@@ -95,11 +97,10 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 
         {/* Bottom Copyright Row */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#E6DCB9]/60">
-          <p>© 2026 Kevay International. All rights reserved. Registered Export House.</p>
+          <p>© 2026 Kevay International. Crafted for Brands. Designed for Living.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:underline">Privacy Policy</a>
-            <a href="#" className="hover:underline">Export Terms & Conditions</a>
-            <a href="#" className="hover:underline">Fumigation Compliance</a>
+            <span>Mr. Manan Jangid (Founder & Director)</span>
+            <span>Mr. Rajesh Kumar Jangid (Leadership)</span>
           </div>
         </div>
 
